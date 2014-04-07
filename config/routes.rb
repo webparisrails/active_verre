@@ -1,4 +1,8 @@
 ActiveVerre::Application.routes.draw do
+ 
+  get "/contact" => "page#contact"
+  get "/my_account" => "page#my_account"
+  root :to => "page#home"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
