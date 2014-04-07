@@ -1,5 +1,6 @@
 ActiveVerre::Application.routes.draw do
  
+  devise_for :users
   get "/contact" => "page#contact"
   get "/my_account" => "page#my_account"
   root :to => "page#home"
