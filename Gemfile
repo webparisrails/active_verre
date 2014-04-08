@@ -18,7 +18,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :developement, :test do
+group :development, :test do
   gem 'better_errors'
   gem 'sqlite3'
   gem 'rspec-rails'
@@ -27,6 +27,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
 
 # Could be usefull
