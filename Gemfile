@@ -3,9 +3,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
-# Use sqlite3 as the database for Active Record
-gem 'pg'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 
@@ -16,7 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+ gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -32,18 +29,22 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'therubyracer'
-
 #User/Client/Admin management
 gem 'devise'
-gem 'cancan'
-gem 'rails_admin'
 
-group :developement do
+group :developement, :test do
   gem 'better_errors'
   gem 'sqlite3'
+  gem 'rspec-rails'
 end
 
+group :production do
+  gem 'pg'
+end
+
+#group :test do 
+#  gem 'rspec'
+#end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
