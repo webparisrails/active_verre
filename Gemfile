@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0'
 gem 'rails', '4.0.4'           # Bundle edge Rails instead: gem 'rails'
 gem 'sass-rails', '~> 4.0.2'   # Use SCSS for stylesheets
 gem 'uglifier', '>= 1.3.0'     # Compressor for JavaScript assets
