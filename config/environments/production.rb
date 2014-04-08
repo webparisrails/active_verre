@@ -28,7 +28,7 @@ ActiveVerre::Application.configure do
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
-
+  config.assets.precompile += ['active_admin.js', 'active_admin.css', 'active_admin/print.css']
   # Generate digests for assets URLs.
   config.assets.digest = true
 
