@@ -36,8 +36,10 @@ gem 'therubyracer'
 
 #User/Client/Admin management
 gem 'devise'
-gem 'cancan'
-gem 'rails_admin'
+
+#User/Client/Active Admin
+gem "ransack", github: "activerecord-hackery/ransack", branch: "rails-4"
+gem 'activeadmin', github: 'gregbell/active_admin'
 
 group :developement do
   gem 'better_errors'
