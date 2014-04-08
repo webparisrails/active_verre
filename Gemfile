@@ -1,4 +1,4 @@
-source 'git@github.com:webparisrails/active_verre.git'
+source 'https://rubygems.org'
 
 gem 'rails', '4.0.4'           # Bundle edge Rails instead: gem 'rails'
 gem 'sass-rails', '~> 4.0.2'   # Use SCSS for stylesheets
@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 1.2'       # Build JSON APIs with ease
 gem 'devise'                   # User/Client/Admin management
 gem "ransack", github: "activerecord-hackery/ransack", branch: "rails-4"
 gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'haml-rails'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 group :doc do
