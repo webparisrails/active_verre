@@ -1,0 +1,17 @@
+%h1 Liste de Produit
+
+%p
+  - Produit.all.each do |a|
+    %br
+      Product :
+      = a.id
+      = a.titre
+      = a.categorie
+      = a.description
+      = a.prix
+      = a.dispo
+
+
+%p
+  Retourner à
+  = link_to 'Accueil', '/'
