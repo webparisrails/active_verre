@@ -5,6 +5,7 @@ ActiveVerre::Application.routes.draw do
   devise_for :users
   get "/contact" => "page#contact"
   get "/my_account" => "page#my_account"
+  get "/product" => "page#product"
   root :to => "page#home"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

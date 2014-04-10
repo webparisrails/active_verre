@@ -10,4 +10,8 @@ class PageController < ApplicationController
   def my_account
     @titre = "Mon compte"
   end
+  
+  def product
+    @titre = "Produit"
+  end
 end
