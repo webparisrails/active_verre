@@ -13,6 +13,7 @@ gem 'devise'                   # User/Client/Admin management
 gem "ransack", github: "activerecord-hackery/ransack", branch: "rails-4"
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'haml-rails'
+gem 'protected_attributes'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 group :doc do
