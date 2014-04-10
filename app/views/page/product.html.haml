@@ -1,15 +1,15 @@
 %h1 Liste de Produit
 
 %p
-  - Produit.all.each do |a|
+  - Product.all.each do |a|
     %br
       Product :
       = a.id
-      = a.titre
-      = a.categorie
+      = a.title
+      = a.category
       = a.description
       = a.prix
-      = a.dispo
+
 
 
 %p
