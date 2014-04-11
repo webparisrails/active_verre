@@ -3,12 +3,14 @@
 %p
   - Product.all.each do |a|
     %br
-      Product :
-      = a.id
+      /Product :
+      /= a.id
       = a.title
-      = a.category
+      /= a.category 
       = a.description
-      = a.prix
+      = a.prix 
+      €
+
 
 
 
