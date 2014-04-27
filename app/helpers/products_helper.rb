@@ -1,2 +1,2 @@
-module ProductHelper
+module ProductsHelper
 end
