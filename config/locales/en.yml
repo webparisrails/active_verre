@@ -20,4 +20,15 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  products:
+    show:
+      add_to_cart: "Add to cart"
+  carts:
+    show:
+      card_number: "Card number"
+      cvc: "CVC"
+      submit_payment: "Submit Payment"
+  sign_up: "Sign up"
+  sign_in: "Sign in"
+  checkout: "Checkout"
+

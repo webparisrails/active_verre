@@ -12,11 +12,17 @@ gem 'jbuilder', '~> 1.2'       # Build JSON APIs with ease
 gem 'devise'                   # User/Client/Admin management
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'haml-rails'
-gem 'protected_attributes'
+gem 'simple_form'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 group :doc do
   gem 'sdoc', require: false
+end
+
+group :test do
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
+  gem 'launchy'
 end
 
 group :development, :test do
