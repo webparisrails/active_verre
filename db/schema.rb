@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 20140410005107) do
 
   add_index "products", ["category_id"], name: "index_products_on_category_id"
 
-  create_table "produits", force: true do |t|
+  create_table "products", force: true do |t|
     t.string   "categorie"
     t.string   "titre"
     t.string   "description"
