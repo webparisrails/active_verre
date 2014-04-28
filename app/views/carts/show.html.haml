@@ -1,0 +1,27 @@
+.text--center
+  .dialog-box.text--left
+    %h1 Charge #{@cart.price} €
+
+    %form#payment-form{action: "/carts/#{@cart.id}/payments", method: "POST"}
+      %span.payment-errors
+
+      .form-row.soft-half
+        %label
+          %span= t('.card_number')
+          %input#card-number{type: "text", size: "20", data: {stripe: "number"}}
+
+      .form-row.soft-half
+        %label
+          %span= t('.cvc')
+          %input#cvc{type: "text", size: "4", data: {stripe: "cvc"}}
+
+      .form-row.soft-half
+        %label
+          %span Expiration (MM/YYYY)
+          %input#expirationmm{type: "text", size: "2", data: {stripe: "exp-month"}}
+
+        %span /
+        %input#expirationyear{type: "text", size: "4", data: {stripe: "exp-year"}}
+
+      .text--left>
+        %button{type: "submit"}= t('.submit_payment')

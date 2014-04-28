@@ -1,12 +1,20 @@
 ActiveVerre::Application.routes.draw do
- 
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
-  get "/contact" => "page#contact"
-  get "/my_account" => "page#my_account"
-  get "/product" => "page#product"
-  root :to => "page#home"
+  # get "/contact" => "page#contact"
+  # get "/my_account" => "page#my_account"
+  # get "/product" => "page#product"
+
+  resources :carts do
+    resources :payments
+  end
+  resources :products do
+    resources :cart_items
+  end
+
+  root :to => "products#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

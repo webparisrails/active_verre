@@ -1,0 +1,17 @@
+!!! 5
+%html
+  %head
+    %title ActiveVerre
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    .notice= notice
+    .alert= alert
+    - if current_user.present?
+      = link_to t('checkout'), current_user.cart
+      = link_to t('logout'), destroy_user_session_path, method: :delete
+    - else
+      = link_to t('sign_up'), new_user_registration_path
+      = link_to t('sign_in'), new_user_session_path
+    = yield

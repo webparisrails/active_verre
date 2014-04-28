@@ -1,18 +1,18 @@
 ActiveAdmin.register Product do
-  belongs_to :category
+  permit_params :category, :name, :price, :availability
+  # belongs_to :category
 #  navigation_menu :admin
 
-#    permit_params :category, :title, :description, :prix, :dispo, :id
 
 #
 #  index do
-#    column :category 
-#    column :title do |a| 
-#      link_to a.title, admin_product_path(a) 
+#    column :category
+#    column :title do |a|
+#      link_to a.title, admin_product_path(a)
 #    end
-#    column :prix do |product| 
-#      number_to_currency product.prix, :unit => "€" 
-#    end 
+#    column :prix do |product|
+#      number_to_currency product.prix, :unit => "€"
+#    end
 #    column :dispo
 #    default_actions
 #  end
@@ -29,5 +29,5 @@ ActiveAdmin.register Product do
   #  permitted << :other if resource.something?
   #  permitted
   # end
-  
+
 end
