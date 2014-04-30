@@ -33,5 +33,9 @@ ActiveAdmin.register AdminUser do
 end
 
 ActiveAdmin.setup do |config|
+  # Disable the comments in active admin
   config.allow_comments = false
+
+  # Disable the view of filter
+  config.filters = false
 end

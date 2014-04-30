@@ -1,5 +1,5 @@
 ActiveAdmin.register Product do
-  permit_params :category, :name, :price, :availability
+  permit_params :category, :name, :price, :availability, :description
   # belongs_to :category
 #  navigation_menu :admin
 
