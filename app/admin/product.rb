@@ -4,6 +4,24 @@ ActiveAdmin.register Product do
 #  navigation_menu :admin
 
 
+  ## View for products in active admin ##
+  index do
+    selectable_column
+    id_column
+    column :categorie, :category
+    column :nom, :name
+    column :description
+    column :prix, :price do |product|
+      number_to_currency product.price, :unit => "€"
+    end
+    column :disponible, :availability do |available|
+    status_tag(available.availability? ? "OUI" : "NON", (available.availability ? :ok : :warning))
+    end
+    column :créer, :created_at
+    column :mis_à_jour, :updated_at
+    default_actions
+    end
+
 #
 #  index do
 #    column :category

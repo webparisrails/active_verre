@@ -1,6 +1,16 @@
 ActiveAdmin.register Category do
 
   permit_params :name
+
+  ## View for category in active admin ##
+  index do
+    selectable_column
+    id_column
+    column :nom, :name
+    column :créer, :created_at
+    column :mis_à_jour, :updated_at
+    default_actions
+  end
 #  sidebar "Product ma geul" do
 #    ul do
 #      li link_to("Double vitrage", new_admin_category_product_path(:id))
