@@ -1,6 +1,10 @@
 .text--center
   .dialog-box.text--left
     %h1 Charge #{@cart.price} €
+    - @cart.cart_items.each do |item|
+      %li
+        = item.quantity
+        \x #{item.product.name}
 
     %form#payment-form{action: "/carts/#{@cart.id}/payments", method: "POST"}
       %span.payment-errors
